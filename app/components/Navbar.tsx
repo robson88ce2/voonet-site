@@ -8,39 +8,58 @@ export default function Navbar() {
 
   return (
     <header className="bg-black border-b border-zinc-800">
-
       <div className="max-w-[1600px] mx-auto px-8 py-4 flex items-center justify-between">
 
-        <Image
-          src="/images/logo.png"
-          alt="Voonet"
-          width={220}
-          height={70}
-          priority
-        />
+        {/* LOGO */}
+        <a href="/">
+          <Image
+            src="/images/logo.png"
+            alt="Voonet"
+            width={220}
+            height={70}
+            priority
+          />
+        </a>
 
-        {/* Desktop */}
-        <nav className="hidden md:flex gap-10 text-white">
+        {/* MENU DESKTOP */}
+        <nav className="hidden md:flex items-center gap-8 text-white">
 
-          <a href="/" className="hover:text-orange-500">
+          <a href="/" className="hover:text-orange-500 transition">
             Home
           </a>
 
-          <a href="/planos" className="hover:text-orange-500">
+          <a href="/planos" className="hover:text-orange-500 transition">
             Planos
           </a>
 
-          <a href="/cobertura" className="hover:text-orange-500">
+          <a href="/cobertura" className="hover:text-orange-500 transition">
             Cobertura
           </a>
 
-          <a href="/contato" className="hover:text-orange-500">
+          <a href="/contato" className="hover:text-orange-500 transition">
             Contato
+          </a>
+
+          <a
+            href="https://voonettelecom.gesprovcloud.com.br/central"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              bg-orange-500
+              hover:bg-orange-600
+              px-5
+              py-2
+              rounded-xl
+              font-semibold
+              transition
+            "
+          >
+            Central do Assinante
           </a>
 
         </nav>
 
-        {/* Botão Mobile */}
+        {/* BOTÃO MOBILE */}
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -50,19 +69,56 @@ export default function Navbar() {
 
       </div>
 
-      {/* Menu Mobile */}
+      {/* MENU MOBILE */}
       {menuOpen && (
         <div className="md:hidden bg-zinc-900 border-t border-zinc-800">
 
           <nav className="flex flex-col p-6 text-white gap-5">
 
-            <a href="/">Home</a>
+            <a
+              href="/"
+              className="hover:text-orange-500 transition"
+            >
+              Home
+            </a>
 
-            <a href="/planos">Planos</a>
+            <a
+              href="/planos"
+              className="hover:text-orange-500 transition"
+            >
+              Planos
+            </a>
 
-            <a href="/cobertura">Cobertura</a>
+            <a
+              href="/cobertura"
+              className="hover:text-orange-500 transition"
+            >
+              Cobertura
+            </a>
 
-            <a href="#">Contato</a>
+            <a
+              href="/contato"
+              className="hover:text-orange-500 transition"
+            >
+              Contato
+            </a>
+
+            <a
+              href="https://voonettelecom.gesprovcloud.com.br/central"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                bg-orange-500
+                hover:bg-orange-600
+                text-center
+                py-3
+                rounded-xl
+                font-semibold
+                transition
+              "
+            >
+              Central do Assinante
+            </a>
 
           </nav>
 
