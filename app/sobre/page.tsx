@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   Cable,
   Eye,
@@ -21,18 +21,28 @@ import {
 import { FaWhatsapp, FaArrowRight } from "react-icons/fa";
 
 /* ── Variantes ── */
-const fadeUp = {
-  hidden: { opacity: 0, y: 32 },
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
+    transition: {
+      duration: 0.55,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.13 } },
+  visible: {
+    transition: {
+      staggerChildren: 0.13,
+    },
+  },
 };
 
 /* ── Dados ── */
@@ -212,7 +222,7 @@ export default function Sobre() {
           <motion.div
             initial={{ opacity: 0, scale: 0.93, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative"
           >
             <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-3xl" />
