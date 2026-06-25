@@ -146,7 +146,7 @@ Bairro: ${bairro}
 
       <div className="bg-zinc-100 rounded-3xl p-8 text-center">
         <h3 className="font-bold text-2xl">
-          Itapipoca
+          Trairi
         </h3>
       </div>
 
@@ -154,7 +154,7 @@ Bairro: ${bairro}
 
       <div className="bg-zinc-100 rounded-3xl p-8 text-center">
         <h3 className="font-bold text-2xl">
-          Trairi
+          Itapipoca
         </h3>
       </div>
 

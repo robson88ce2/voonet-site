@@ -1,31 +1,6 @@
-export default function Planos() {
-  const planos = [
-    {
-      nome: "500 MB",
-      preco: "79,90",
-      descricao: "Ideal para uso diário",
-      destaque: false,
-    },
-    {
-      nome: "700 MB",
-      preco: "99,90",
-      descricao: "Mais contratado",
-      destaque: true,
-    },
-    {
-      nome: "1000 MB",
-      preco: "134,90",
-      descricao: "Alta performance",
-      destaque: false,
-    },
-    {
-      nome: "1500 MB",
-      preco: "150,00",
-      descricao: "Máxima velocidade",
-      destaque: false,
-    },
-  ];
+import { planos } from "../data/planos";
 
+export default function Planos() {
   return (
     <main className="min-h-screen bg-zinc-100 py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -111,10 +86,9 @@ export default function Planos() {
                   p.destaque ? "text-orange-100" : "text-gray-700"
                 }`}
               >
-                <li>✓ Fibra óptica</li>
-                <li>✓ Wi-Fi grátis</li>
-                <li>✓ Suporte técnico</li>
-                <li>✓ Instalação rápida</li>
+                {p.recursos.map((recurso) => (
+                  <li key={recurso}>✓ {recurso}</li>
+                ))}
               </ul>
 
               <a

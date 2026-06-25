@@ -83,14 +83,26 @@ ${mensagem}
                   <span>WhatsApp Comercial</span>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <FaEnvelope className="text-orange-500 text-xl" />
-                  <span>contato@voonet.com.br</span>
+            
+
+                <div className="flex items-start gap-4">
+                  <FaEnvelope className="text-orange-500 text-xl mt-1" />
+                  <div>
+                    <span className="block font-semibold">
+                      Autoridades públicas e aplicação da lei
+                    </span>
+                    <a
+                      href="mailto:contato@voonet.com.br"
+                      className="text-gray-700 hover:text-orange-500 transition"
+                    >
+                      contato@voonet.com.br
+                    </a>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <FaMapMarkerAlt className="text-red-500 text-xl" />
-                  <span>Itapipoca - Ceará</span>
+                  <span>Trairi - Ceará</span>
                 </div>
 
               </div>
@@ -194,7 +206,7 @@ ${mensagem}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
 
             <iframe
-              src="https://maps.google.com/maps?q=Itapipoca&t=&z=12&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Trairi%20Cear%C3%A1&t=&z=12&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
               loading="lazy"

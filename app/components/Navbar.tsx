@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
       <div className="max-w-[1600px] mx-auto px-8 py-4 flex items-center justify-between">
 
         {/* LOGO */}
-        <a href="/">
+        <Link href="/">
           <Image
             src="/images/logo.png"
             alt="Voonet"
@@ -19,26 +20,32 @@ export default function Navbar() {
             height={70}
             priority
           />
-        </a>
+        </Link>
 
         {/* MENU DESKTOP */}
         <nav className="hidden md:flex items-center gap-8 text-white">
 
-          <a href="/" className="hover:text-orange-500 transition">
+          <Link href="/" className="hover:text-orange-500 transition">
             Home
-          </a>
+          </Link>
 
-          <a href="/planos" className="hover:text-orange-500 transition">
+          <Link href="/planos" className="hover:text-orange-500 transition">
             Planos
-          </a>
+          </Link>
 
-          <a href="/cobertura" className="hover:text-orange-500 transition">
+          <Link href="/cobertura" className="hover:text-orange-500 transition">
             Cobertura
-          </a>
+          </Link>
 
-          <a href="/contato" className="hover:text-orange-500 transition">
+          <Link href="/contato" className="hover:text-orange-500 transition">
             Contato
-          </a>
+          </Link>
+          <Link
+            href="/sobre"
+            className="hover:text-orange-500 transition"
+          >
+            Sobre Nós
+          </Link>
 
           <a
             href="https://voonettelecom.gesprovcloud.com.br/central"
@@ -75,33 +82,44 @@ export default function Navbar() {
 
           <nav className="flex flex-col p-6 text-white gap-5">
 
-            <a
+            <Link
               href="/"
               className="hover:text-orange-500 transition"
+              onClick={() => setMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/planos"
               className="hover:text-orange-500 transition"
+              onClick={() => setMenuOpen(false)}
             >
               Planos
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/cobertura"
               className="hover:text-orange-500 transition"
+              onClick={() => setMenuOpen(false)}
             >
               Cobertura
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/contato"
               className="hover:text-orange-500 transition"
+              onClick={() => setMenuOpen(false)}
             >
               Contato
-            </a>
+            </Link>
+            <Link
+              href="/sobre"
+              className="hover:text-orange-500 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              Sobre Nós
+            </Link>
 
             <a
               href="https://voonettelecom.gesprovcloud.com.br/central"
